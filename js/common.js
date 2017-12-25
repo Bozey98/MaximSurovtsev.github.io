@@ -26,31 +26,27 @@ if($(window).width() < 480) {
         margin_ = 100;
 }
 $('.owl-carousel').owlCarousel({
-
-    items:number_of_carousel_items,
-    slideBy:slide_by,
+    items:1,
+    slideBy:1,
     mouseDrag:false,
     stagePadding:30,
-
-    loop:false,
-    margin:margin_,
+    animateIn: 'fadeInUp',
+    animateOut: 'fadeOutDown',
+    loop:true,
+    margin:100,
     nav:true,
-    navText: ["<img src='../img/prev.png'>","<img src='../img/next.png'>"],
-    responsive:{
-        0:{
-            items:1
-        },
-        600:{
-            items:2
-        }
-    },
-    smartSpeed:450
+    navText: ["<img src='../img/back.png'>","<img src='../img/next.png'>"],
+   
+    //smartSpeed:40000
 });
+
+ц
+
 if($(window).width() > 480) {
 $('h2').animated('fadeInDown');
 $('.time').animated('zoomIn');
 $('.sixth-screen img').animated('zoomIn');
-$('.scheme-grid-container').animated('zoomIn');
+//$('.scheme-grid-container').animated('zoomIn');
 }
 });
 $('.navLink').on('click', function() {
@@ -70,7 +66,7 @@ $('.navLink').on('click', function() {
 
 });
 
-var countDownDate = new Date("Apr 11, 2018 00:00:00").getTime();
+var countDownDate = new Date("Feb 1, 2018 00:00:00").getTime();
 // Update the count down every 1 second
 var x = setInterval(function() {
 
