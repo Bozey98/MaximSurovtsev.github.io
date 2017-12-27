@@ -40,7 +40,7 @@ $('.owl-carousel').owlCarousel({
     //smartSpeed:40000
 });
 
-ц
+
 
 if($(window).width() > 480) {
 $('h2').animated('fadeInDown');

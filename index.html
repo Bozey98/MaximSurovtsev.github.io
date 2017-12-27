@@ -331,11 +331,13 @@
 				<input type="hidden" name="form_subject" value="Form Subject">
 				<!-- END Hidden Required Fields -->
 				<form class='callback'>
-					<input type="text" name="Name" placeholder="Имя" required>
-					<input type="text" name="E-mail" placeholder="Телефон или e-mail" required>
-
+					<p>Введите Ваше имя</p>
+					<input type="text" name="Name" placeholder="Иван Иванов" required>
+					<p>Введите Ваш номер телефон или e-mail</p>
+					<input type="text" name="E-mail" placeholder="89773751232" required>
+					<p></p>
 					<textarea name="Message" placeholder="Сообщение"></textarea>
-					<button class='btn'>Заказать звонок</button>
+					<button class='btn'>Отправить заявку</button>
 				</form>
 				<div class="imgContainer">
 					<a href="https://www.behance.net/studioinsi4ba1" target="_blank" class='social'><img src="img/be.png" alt=""></a>
@@ -405,6 +407,7 @@
 					$('.navigation').toggleClass('visible');
 					$('.toggle-menu').toggleClass('active');
 					$('.headerLogo').toggleClass('animated');
+					$('.navItem').toggleClass('animatedLink');
 				});
 
 		});
