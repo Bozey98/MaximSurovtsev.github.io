@@ -16,11 +16,37 @@
 	};
 })(jQuery);
 
+if($(window).width() < 480) {
+    $('.sixth-screen .container').addClass('owl-carousel');
+    // $('.sixth-screen .container').addClass('owl-theme');
+
+    $('.sixth-screen .container').owlCarousel({
+   items: 1,
+    slideBy:1,
+    mouseDrag:true,
+    stagePadding: 45,
+
+   // animateIn: 'fadeInUp',
+    //animateOut: 'fadeOutDown',
+    loop:false,
+    nav: true,
+    center: true,
+    startPosition: 1,
+    nav:false,
+    dots: true,
+    dotsEach: true,
+    smartSpeed: 400
+});
+
+}
+
+
 $('.owl-carousel').owlCarousel({
     items:1,
     slideBy:1,
     mouseDrag:false,
     stagePadding:30,
+
    // animateIn: 'fadeInUp',
     //animateOut: 'fadeOutDown',
     loop:true,
