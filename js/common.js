@@ -15,47 +15,38 @@
 		});
 	};
 })(jQuery);
-$(document).ready(function(){
-if($(window).width() < 480) {
-    var number_of_carousel_items = 1,
-        slide_by = 1,
-        margin_ = 0;
-} else {
-    var number_of_carousel_items = 2,
-        slide_by = 2
-        margin_ = 100;
-}
+
 $('.owl-carousel').owlCarousel({
     items:1,
     slideBy:1,
     mouseDrag:false,
     stagePadding:30,
-    animateIn: 'fadeInUp',
-    animateOut: 'fadeOutDown',
+   // animateIn: 'fadeInUp',
+    //animateOut: 'fadeOutDown',
     loop:true,
     margin:100,
     nav:true,
     navText: ["<img src='../img/back.png'>","<img src='../img/next.png'>"],
-   
-    //smartSpeed:40000
+    smartSpeed: 400
 });
 
 
-
-if($(window).width() > 480) {
-$('h2').animated('fadeInDown');
-$('.time').animated('zoomIn');
-$('.sixth-screen img').animated('zoomIn');
-//$('.scheme-grid-container').animated('zoomIn');
-}
+$(document).ready(function(){
+    if($(window).width() > 480) {
+        $('h2').animated('fadeInDown');
+        $('.time').animated('zoomIn');
+        $('.sixth-screen img').animated('zoomIn');
+    }
 });
+
+
 $('.navLink').on('click', function() {
 
     var scrollAnchor = $(this).attr('data-scroll'),
         scrollSpeed = 650,
-        scrollPoint = $('section[data-anchor="' + scrollAnchor + '"]').offset().top - 20;
+        scrollPoint = $('section[data-anchor="' + scrollAnchor + '"]').offset().top;
     if ($(this).attr('data-scroll') == 'fourth-screen') {
-        scrollPoint += $(window).height()*0.23;
+        //scrollPoint += $(window).height()*0.23;
     }
 
     $('body,html').animate({
@@ -67,23 +58,16 @@ $('.navLink').on('click', function() {
 });
 
 var countDownDate = new Date("Feb 1, 2018 00:00:00").getTime();
-// Update the count down every 1 second
-var x = setInterval(function() {
 
-    // Get todays date and time
+var x = setInterval(function() {
     var now = new Date().getTime();
-    
-    // Find the distance between now an the count down date
     var distance = countDownDate - now;
     
-    // Time calculations for days, hours, minutes and seconds
     var days = Math.floor(distance / (1000 * 60 * 60 * 24));
     var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    
-    // Output the result in an element with id="demo"
-   
+  
     var dates = [days, hours, minutes, seconds];
     var names = ["days",'hours','minutes','seconds'];
     dates.forEach(function (item,i,dates) {
@@ -98,8 +82,7 @@ var x = setInterval(function() {
           else
            document.getElementById(names[i]).innerHTML = '0' + item + ':';
       }
-    });
-// If the count down is over, write some text 
+    }); 
     if (distance < 0) {
         clearInterval(x);
         document.getElementById("demo").innerHTML = "EXPIRED";

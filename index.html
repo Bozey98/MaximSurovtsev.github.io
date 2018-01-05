@@ -15,7 +15,7 @@
 	
 	<link rel="stylesheet"  type="text/css" href="css/animate.css">
 	<link rel="stylesheet" href="css/owl.carousel.min.css">
-	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<link rel="stylesheet"  type="text/css" href="css/handorgel.min.css">	
 	
 	<link rel="apple-touch-icon" sizes="57x57" 		href="img/favicon/apple-icon-57x57.png">
 	<link rel="apple-touch-icon" sizes="60x60" 		href="img/favicon/apple-icon-60x60.png">
@@ -50,12 +50,13 @@
 		<img src="img/our-logo.png" class='logo headerLogo'>
 		
 		<ul class="navigation">
-			<li class="navItem"><a a href="#third-screen" data-scroll="third-screen" class="navLink">Наши работы</a></li>
-			<li class="navItem"><a a href="#fifth-screen" data-scroll="fifth-screen" class="navLink">Преимущества</a></li>
-			<li class="navItem"><a a href="#seventh-screen" data-scroll="seventh-screen" class="navLink">Схема работы</a></li>
+			<li class="navItem"><a a href="#third-screen" data-scroll="third-screen" class="navLink">Портфолио</a></li>
+			<li class="navItem"><a a href="#fourth-screen" data-scroll="fourth-screen" class="navLink">Наша команда</a></li>
+			<li class="navItem"><a a href="#fifth-screen" data-scroll="fifth-screen" class="navLink">Выгоды</a></li>	
+			<li class="navItem"><a href="#sixth-screen" data-scroll="sixth-screen" class="navLink">Тарифы</a></li>
+			<li class="navItem"><a href="#seventh-screen" data-scroll="seventh-screen" class="navLink">Схема работы</a></li>
 			<li class="navItem"><a href="#eight-screen" data-scroll="eight-screen" class="navLink">Отзывы</a></li>
-			<li class="navItem"><a href="#ninth-screen" data-scroll="ninth-screen" class="navLink">Контакты</a></li>
-			<li class="navItem"><a href="#ninth-screen" data-scroll="ninth-screen" class="navLink">Вопросы</a></li>
+			
 		</ul>
 		
 		<div class='toggle-menu'>
@@ -153,7 +154,7 @@
 			<p>*Стоимость предоставленных работ составляет от 8 до 16 тыс. р.</p>
 		</section>
 		
-		<section class="fourth-screen screen content-screen">
+		<section class="fourth-screen screen content-screen" id='fourth-screen' data-anchor="fourth-screen">
 			
 			<h2>Наша команда</h2>
 			<div class="wrapper">
@@ -221,7 +222,10 @@
 				</section>
 			</div>
 		</section>
-
+		<div class="smallWrapper">
+			<p>В настройке контекстной рекламы нам помогает компания Direct4you.</p>
+			<p>С их кейсами и командой можно ознакомиться по <a href="#">этой ссылке</a>.</p>
+		</div>
 
 
 		<section class="screen sixth-screen content-screen" id='sixth-screen' data-anchor="sixth-screen">
@@ -268,9 +272,9 @@
 					<p class="scheme-item">Разрабатываем макет Landing page.</p>
 					<p class="scheme-item">Проверка дизайна посадочной страницы.</p>
 					<p class="scheme-item">Внутренний аудит на наличие продающих триггеров на LP.</p>
-					<p class="scheme-item">Презентация Вам дизайн-макета и внесение необходимых правок.</p>
-					<p class="scheme-item">Вёрстка готовой посадочной страницы, размещение на хостинге.</p>
 					<p class="scheme-item">Заключительная проверка и запуск проекта.</p>
+					<p class="scheme-item">Вёрстка готовой посадочной страницы, размещение на хостинге.</p>
+					<p class="scheme-item">Презентация Вам дизайн-макета и внесение необходимых правок.</p>
 			</section>
 
 			<img src="img/scheme.png" alt="">
@@ -387,16 +391,17 @@
 		
 		<nav>
 			<ul class="navigation">
-				<li class="navItem"><a href="#third-screen" data-scroll="third-screen" class="navLink">Наши работы</a></li>
-				<li class="navItem"><a href="#fourth-screen" data-scroll="fourth-screen" class="navLink">Преимущества</a></li>
-				<li class="navItem"><a href="#fifth-screen" data-scroll="fifth-screen" class="navLink">Схема работы</a></li>
-				<li class="navItem"><a href="#sixth-screen" data-scroll="sixth-screen" class="navLink">Отзывы</a></li>
-				<li class="navItem"><a href="#seventh-screen" data-scroll="seventh-screen" class="navLink">Контакты</a></li>
+				<li class="navItem"><a a href="#third-screen" data-scroll="third-screen" class="navLink">Портфолио</a></li>
+				<li class="navItem"><a a href="#fourth-screen" data-scroll="fourth-screen" class="navLink">Наша команда</a></li>
+				<li class="navItem"><a a href="#fifth-screen" data-scroll="fifth-screen" class="navLink">Выгоды</a></li>	
+				<li class="navItem"><a href="#sixth-screen" data-scroll="sixth-screen" class="navLink">Тарифы</a></li>
+				<li class="navItem"><a href="#seventh-screen" data-scroll="seventh-screen" class="navLink">Схема работы</a></li>
+				<li class="navItem"><a href="#eight-screen" data-scroll="eight-screen" class="navLink">Отзывы</a></li>
 			</ul>
 		</nav>
 	</footer>
-		
-	<script src="js/jquery.waypoints.js"></script>
+	<script src="js/handorgel.min.js"></script>
+	<script src="js/jquery.waypoints.min.js"></script>
 	<script src='js/waypoints.debug.js'></script>
 	<script src="js/common.js"></script>
 	<script src="js/scripts.min.js"></script>
@@ -408,6 +413,7 @@
 					$('.toggle-menu').toggleClass('active');
 					$('.headerLogo').toggleClass('animated');
 					$('.navItem').toggleClass('animatedLink');
+					$('body').toggleClass('bodyAnimation');
 				});
 
 		});
