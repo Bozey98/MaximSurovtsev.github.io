@@ -409,11 +409,17 @@
 		$(document).ready(function(){
 			$('.toggle-menu span').click(function()
 				{
+					if($('.navigation').hasClass('visible') == true)
+					{
+						$('.navigation').toggleClass('non-visible');
+						$('.navigation').toggleClass('visible');
+					}
 					$('.navigation').toggleClass('visible');
 					$('.toggle-menu').toggleClass('active');
 					$('.headerLogo').toggleClass('animated');
 					$('.navItem').toggleClass('animatedLink');
-					$('body').toggleClass('bodyAnimation');
+					$('nav').toggleClass('bodyAnimation');
+
 				});
 
 		});
