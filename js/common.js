@@ -42,18 +42,28 @@ if($(window).width() < 480) {
 
 
 $('.owl-carousel').owlCarousel({
-    items:1,
-    slideBy:1,
-    mouseDrag:false,
-    stagePadding:30,
-
-   // animateIn: 'fadeInUp',
-    //animateOut: 'fadeOutDown',
+    items:2,
+    slideBy:2,
+    mouseDrag:true,
     loop:true,
-    margin:100,
+    stagePadding:60,
+  
     nav:true,
     navText: ["<img src='../img/back.png'>","<img src='../img/next.png'>"],
-    smartSpeed: 400
+    smartSpeed: 400,
+    responsive: {
+        0:{
+            items: 1,
+            slideBy: 1,
+            nav: false,
+            stagePadding:0
+        },
+        1000:{
+            items:2,
+            slideBy:2,
+            nav:true
+        }
+    }
 });
 
 

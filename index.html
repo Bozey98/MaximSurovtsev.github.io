@@ -54,7 +54,7 @@
 			<li class="navItem"><a a href="#fourth-screen" data-scroll="fourth-screen" class="navLink">Наша команда</a></li>
 			<li class="navItem"><a a href="#fifth-screen" data-scroll="fifth-screen" class="navLink">Выгоды</a></li>	
 			<li class="navItem"><a href="#sixth-screen" data-scroll="sixth-screen" class="navLink">Тарифы</a></li>
-			<!-- <li class="navItem"><a href="#seventh-screen" data-scroll="seventh-screen" class="navLink">Схема работы</a></li> -->
+			<li class="navItem"><a href="#seventh-screen" data-scroll="seventh-screen" class="navLink">Схема работы</a></li>
 			<li class="navItem"><a href="#eight-screen" data-scroll="eight-screen" class="navLink">Отзывы</a></li>
 			
 		</ul>
@@ -260,7 +260,7 @@
 			
 	</section>
 	<section class="screen seventh-screen content-screen" id='seventh-screen' data-anchor="seventh-screen">
-			<h2>Схема работы</h2>
+			<h2 class="mainTitle">Схема работы</h2>
 			
 			<section class="scheme-grid-container">
 					<p class="scheme-item">Вы оставляете заявку, наш менеджер связывается с вами.</p>
@@ -278,6 +278,26 @@
 			</section>
 
 			<img src="img/scheme.png" alt="">
+
+			<div class="mobileSchemeContainer">
+				
+				<div class="landScheme">
+					<h2>Схема работы <span>(Landing page)</span></h2>
+
+					<p><span>1-й этап:</span> Наш менеджер связывается с Вами по указанному в заявке телефону, обсуждается проект, устанавливаются сроки, планируется бюджет</p>
+					<p><span>2-й этап:</span> выявление основных "персонажей" Вашей целевой аудитории, анкетирование пользователей, прототипирование будущего сайта. </p>
+					<p><span>3-й этап:</span> дизайн прототипа, написание продающих текстов, составление стимулирующих "триггеров".</p>
+					<p><span>4-й этап:</span> утверждение Вами дизайна страницы, вёрстка дизайн-макета, регистрация домена, посадка сайта на хостинг. А также A/B тестирование и поиск уязвимостей. Сдача проекта!</p>
+				</div>
+				
+				<div class="yaScheme">
+					<h2>Схема работы <span>(Яндекс.Директ)</span></h2>
+					<p><span>1-й этап:</span> написание семантики. Отправка семантики в виде Excel-таблицы Вам на проверку.</p>
+					<p><span>2-й этап:</span> написание текстов для объявлений.</p>
+					<p><span>3-й этап:</span> дизайн прототипа, написание продающих текстов, составление стимулирующих тригерров.</p>
+				</div>	
+			</div>	
+
 			<button class="btn btnPart">Оставить заявку</button>
 
 		</section>
@@ -286,30 +306,30 @@
 		<section class="screen eight-screen content-screen" id='eight-screen' data-anchor="eight-screen">
 			<h2>Отзывы</h2>
 			<div class="owl-carousel owl-theme">
+				
 				<div class="item">
-				<div class="wrapper">
 					<img src="img/answer1.png" alt="">
 					<h3>Суровцев Максим, "Crackhead"</h3>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus ipsum animi fugiat tempore vel praesentium officiis doloribus consequuntur sit. Cupiditate.</p>
-				</div>
-				<div class="wrapper">
-					<img src="img/answer1.png" alt="">
-					<h3>Суровцев Максим, "Crackhead"</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus ipsum animi fugiat tempore vel praesentium officiis doloribus consequuntur sit. Cupiditate.</p>
-				</div>
 				</div>
 				<div class="item">
-					<div class="wrapper">
 					<img src="img/answer1.png" alt="">
 					<h3>Суровцев Максим, "Crackhead"</h3>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus ipsum animi fugiat tempore vel praesentium officiis doloribus consequuntur sit. Cupiditate.</p>
 				</div>
-				<div class="wrapper">
+			
+				
+					<div class="item">
 					<img src="img/answer1.png" alt="">
 					<h3>Суровцев Максим, "Crackhead"</h3>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus ipsum animi fugiat tempore vel praesentium officiis doloribus consequuntur sit. Cupiditate.</p>
 				</div>
-</div>
+				<div class="item">
+					<img src="img/answer1.png" alt="">
+					<h3>Суровцев Максим, "Crackhead"</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus ipsum animi fugiat tempore vel praesentium officiis doloribus consequuntur sit. Cupiditate.</p>
+				</div>
+
 			</div>
 		</section>
 
@@ -317,7 +337,7 @@
 		<section class="screen ninth-screen content-screen" id='#ninth-screen' data-anchor="ninth-screen">
 			
 			<div class='timer'>
-				<p>Только до конца января</p>
+				
 				<h3>При заказе пакета "VIP" получите <span>месяц ведения</span> рекламной кампании</h3>
 				<section class='time'>
 					<span id="days"></span>
@@ -335,11 +355,8 @@
 				<input type="hidden" name="form_subject" value="Form Subject">
 				<!-- END Hidden Required Fields -->
 				<form class='callback'>
-					<p>Введите Ваше имя</p>
 					<input type="text" name="Name" placeholder="Иван Иванов" required>
-					<p>Введите Ваш номер телефон или e-mail</p>
 					<input type="text" name="E-mail" placeholder="89773751232" required>
-					<p></p>
 					<textarea name="Message" placeholder="Сообщение"></textarea>
 					<button class='btn'>Отправить заявку</button>
 				</form>
@@ -353,7 +370,6 @@
 		
 		</section>
 
-	</section>
 
 
 	<footer>
