@@ -69,12 +69,12 @@ $(document).ready(function(){
 $('.navLink').on('click', function() {
 
     var scrollAnchor = $(this).attr('data-scroll'),
-        scrollSpeed = 650,
-        scrollPoint = $('section[data-anchor="' + scrollAnchor + '"]').offset().top;
+        scrollSpeed = 450,
+        scrollPoint = $('section[data-anchor="' + scrollAnchor + '"]').offset().top + 30;
     if ($(this).attr('data-scroll') == 'fourth-screen') {
         //scrollPoint += $(window).height()*0.23;
     }
-
+   
     $('body,html').animate({
         scrollTop: scrollPoint
     }, scrollSpeed);
@@ -117,7 +117,8 @@ var x = setInterval(function() {
 
 $(window).scroll(function() {
     var windscroll = $(window).scrollTop();
-    if (windscroll >= 100) {
+    
+    if (windscroll >= 0) {
         $('.content-screen').each(function(i) {
             if ($(this).position().top <= windscroll) {
                 $('.navLink.activeLink').removeClass('activeLink');
