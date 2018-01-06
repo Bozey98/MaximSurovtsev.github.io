@@ -90,11 +90,6 @@
 					<input type="text" name="Phone" placeholder="3582901" required maxlength="7"  pattern="[0-9]{7}">
 					<button class='btn'>Отправить заявку</button>
 				</form>
-				<div class="imgContainer">
-					<a href="https://www.behance.net/studioinsi4ba1" target="_blank" class='social'><img src="img/be.png" alt=""></a>
-					<a href="https://vk.com/insite_web" target="_blank" class='social'><img src="img/vk.png" alt=""></a>
-					<a href="https://freelance.ru/IvanKxT" target="_blank" class='social'><img src="img/fl.png" alt=""></a>
-				</div>
 			</section>
 		</div>
 
@@ -381,14 +376,16 @@
 				<h2>Связаться с нами</h2>
 				<p>С помощью этой формы вы можете связаться с нами напрямую.</p>
 				<!-- Hidden Required Fields -->
-				<input type="hidden" name="project_name" value="Site Name">
+				<input type="hidden" name="project_name" value="Site Name" >
 				<input type="hidden" name="admin_email" value="admin@mail.com">
 				<input type="hidden" name="form_subject" value="Form Subject">
 				<!-- END Hidden Required Fields -->
 				<form class='callback'>
-					<input type="text" name="Name" placeholder="Иван Иванов" required>
-					<input type="text" name="E-mail" placeholder="89773751232" required>
-					<textarea name="Message" placeholder="Сообщение"></textarea>
+					<input type="text" name="Name" placeholder="Имя" required pattern="[A-Za-zА-Яа-яЁё]">
+					<div>
+					<input type="text" name="first" placeholder="+7" disabled value="+7">
+					<input type="text" name="second" placeholder="977" required maxlength="3" pattern="[0-9]{3}">
+					<input type="text" name="Phone" placeholder="3582901" required maxlength="7"  pattern="[0-9]{7}">
 					<button class='btn'>Отправить заявку</button>
 				</form>
 				<div class="imgContainer">
