@@ -66,13 +66,24 @@ $('.owl-carousel').owlCarousel({
 });
 
 
-$(document).ready(function(){
-    if($(window).width() > 480) {
-        $('h2').animated('fadeInDown');
-        $('.time').animated('zoomIn');
-        $('.sixth-screen img').animated('zoomIn');
-    }
+$(".close").click(function() {
+    $(".overlay").addClass("removed");
+    setTimeout(function() {
+        $(".overlay").removeClass("hidden");
+    }, 510);
 });
+
+$(".btn").click(function() {
+    $(".overlay").removeClass("removed");
+    $(".overlay").addClass("hidden");
+});
+// $(document).ready(function(){
+//     if($(window).width() > 480) {
+//         $('h2').animated('fadeInDown');
+//         $('.time').animated('zoomIn');
+//         $('.sixth-screen img').animated('zoomIn');
+//     }
+// });
 
 var mobileOffset = 0;
 
