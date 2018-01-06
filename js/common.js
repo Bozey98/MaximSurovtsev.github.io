@@ -18,24 +18,21 @@
 
 if($(window).width() < 480) {
     $('.sixth-screen .container').addClass('owl-carousel');
-    // $('.sixth-screen .container').addClass('owl-theme');
 
     $('.sixth-screen .container').owlCarousel({
-   items: 1,
-    slideBy:1,
-    mouseDrag:true,
-    stagePadding: 45,
-
-   // animateIn: 'fadeInUp',
-    //animateOut: 'fadeOutDown',
-    loop:false,
-    nav: true,
-    center: true,
-    startPosition: 1,
-    nav:false,
-    dots: true,
-    dotsEach: true,
-    smartSpeed: 400
+        items: 1,
+        slideBy:1,
+        mouseDrag:true,
+        stagePadding: 35,
+        loop:false,
+        nav: true,
+        center: true,
+        startPosition: 1,
+        nav:false,
+        dots: true,
+        URLhashListener: true,
+        dotsEach: true,
+        smartSpeed: 400
 });
 
 }
@@ -47,7 +44,7 @@ $('.owl-carousel').owlCarousel({
     mouseDrag:true,
     loop:true,
     stagePadding:60,
-  
+    
     nav:true,
     navText: ["<img src='../img/back.png'>","<img src='../img/next.png'>"],
     smartSpeed: 400,
@@ -56,12 +53,14 @@ $('.owl-carousel').owlCarousel({
             items: 1,
             slideBy: 1,
             nav: false,
+            dot: true,
             stagePadding:0
         },
         1000:{
             items:2,
             slideBy:2,
-            nav:true
+            nav:true,
+            dot: false
         }
     }
 });
