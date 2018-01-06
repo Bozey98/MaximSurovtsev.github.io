@@ -74,14 +74,19 @@ $(document).ready(function(){
     }
 });
 
+var mobileOffset = 0;
+
+if($(window).width() < 480) {
+    mobileOffset = -60;
+}
 
 $('.navLink').on('click', function() {
 
     var scrollAnchor = $(this).attr('data-scroll'),
         scrollSpeed = 450,
-        scrollPoint = $('section[data-anchor="' + scrollAnchor + '"]').offset().top + 30;
-    if ($(this).attr('data-scroll') == 'fourth-screen') {
-        //scrollPoint += $(window).height()*0.23;
+        scrollPoint = $('section[data-anchor="' + scrollAnchor + '"]').offset().top + mobileOffset;
+    if ($(this).attr('data-scroll') == 'fifth-screen') {
+        scrollPoint += $(window).height()*0.22 + mobileOffset;
     }
    
     $('body,html').animate({
@@ -127,9 +132,9 @@ var x = setInterval(function() {
 $(window).scroll(function() {
     var windscroll = $(window).scrollTop();
     
-    if (windscroll >= 0) {
+    if (windscroll >= 100) {
         $('.content-screen').each(function(i) {
-            if ($(this).position().top <= windscroll) {
+            if ($(this).position().top + mobileOffset*1.25 <= windscroll) {
                 $('.navLink.activeLink').removeClass('activeLink');
                 $('.navLink').eq(i).addClass('activeLink');
             }
