@@ -67,7 +67,8 @@ $('.owl-carousel').owlCarousel({
 
 
 $(".close").click(function() {
-    $(".overlay").addClass("removed");
+    
+$(".overlay").addClass("removed");
     setTimeout(function() {
         $(".overlay").removeClass("hidden");
     }, 510);
