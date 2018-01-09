@@ -2,10 +2,9 @@
 <html lang="ru">
 
 <head>
-
 	<meta charset="utf-8">
 
-	<title>Title</title>
+	<title>Gallery</title>
 	<meta name="description" content="">
 	<link rel="stylesheet" href="css/main.min.css">
 	
@@ -14,50 +13,75 @@
 
 	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 	<style>body { opacity: 1; overflow-x: hidden; } html { background-color: #fff; }</style>
-
 </head>
+
 <header>
 	<nav>
 		<ul>
 			<li><a href="index.html">Home</a></li>
 			<li><a href="gallery.html">Gallery</a></li>
+			<li><a href="training.html">Training</a></li>
 			<li><a href="#">Contact</a></li>
 			<li><a href="#">Store</a></li>
 		</ul>
 	</nav>
    
 </header>
- <button type="button" class="toggle-menu visible-xs" aria-label="Toggle Mobile Menu">
-      <span class="burger-lines"></span>
-    </button>
+
+<button type="button" class="toggle-menu visible-xs" aria-label="Toggle Mobile Menu">
+	<span class="burger-lines"></span>
+</button>
+
 <body>
-	
 	<section class="first screen">
 		<div class="fix"></div>
 		<div class="wrapper">
-		<h1><a class="scroll" href="#scrolling" data-speed="1000">Personal training</a></h1>
-
+			<h1>
+				<a class="scroll" href="#scrolling" data-speed="1000">Personal training</a>
+			</h1>
 		</div>
-	<!-- <button class="down"><a class="scroll" href="#scrolling" data-speed="1000"></a></button> -->
+	<button class="down">
+		<a class="scroll" href="#scrolling" data-speed="1000"></a>
+	</button>
 	</section>
+	
 	<div class="swiper-container">
 		<div class="swiper-wrapper">
 			<div class="swiper-slide"></div>
 			<div class="swiper-slide"></div>
 			<div class="swiper-slide"></div>
 		</div>
-		 <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
-    <div class="swiper-pagination"></div>
+		
+		<div class="swiper-button-prev"></div>
+	    
+	    <div class="swiper-button-next"></div>
+	    <div class="swiper-pagination"></div>
 	</div>
-		<footer id="scrolling">
-			<h1>POWERED BY SUROVTSEV</h1>
-			
-		</footer>
-		<script src="js/jquery.min.js"></script>
-	 <script src="js/swiper.min.js"></script>
+		
+	<footer>
+		
+		<div class="contact">
+			<a href="#"><img src="img/skype.png" alt=""></a>
+			<a href="#"><img src="img/vk.png" alt=""></a>
+			<a href="#"><img src="img/youtube.png" alt=""></a>
+			<a href="#"><img src="img/whatsup.png" alt=""></a>
+		</div>
+		<nav>
+		<ul class='footer-nav'>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="gallery.html">Gallery</a></li>
+			<li><a href="training.html">Training</a></li>
+			<li><a href="#">Contact</a></li>
+			<li><a href="#">Store</a></li>
+		</ul>
+	</nav>
+		<h3><a href="#">designed by maxim surovtsev</a></h3>
+		<!-- <h1>POWERED BY SUROVTSEV</h1> -->
+	</footer>
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/swiper.min.js"></script>
 	<script src="js/scripts.min.js"></script>
-	
 	
 </body>
 </html>
