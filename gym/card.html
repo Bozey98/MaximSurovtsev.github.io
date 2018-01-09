@@ -4,18 +4,15 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>Gallery</title>
+	<title>Home</title>
 	<meta name="description" content="">
 	<link rel="stylesheet" href="css/main.min.css">
-	
-	<link rel="stylesheet" href="css/swiper.min.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
 	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 	<style>body { opacity: 1; overflow-x: hidden; } html { background-color: #fff; }</style>
 </head>
 
-<header>
+<header style="background: #333">
 	<nav>
 		<ul>
 			<li><a href="index.html">Home</a></li>
@@ -25,39 +22,36 @@
 			<li><a href="store.html">Store</a></li>
 		</ul>
 	</nav>
-   
 </header>
 
+<div class="toggle-wrap" style="background: #333; width: 100%; height: 22vw;">
 <button type="button" class="toggle-menu visible-xs" aria-label="Toggle Mobile Menu">
 	<span class="burger-lines"></span>
 </button>
-
+</div>
 <body>
-	<section class="first screen">
-		<div class="fix"></div>
-		<div class="wrapper">
-			<h1>
-				<a class="scroll" href="#scrolling" data-speed="1000">Personal training</a>
-			</h1>
-		</div>
-	<button class="down">
-		<a class="scroll" href="#scrolling" data-speed="1000"></a>
-	</button>
+	<section class="card screen">
+		<div class="card-container">
+			<div class="img-container">
+				<img src="img/img1.jpeg" alt="">
+				<img src="img/img1.jpeg" alt="">
+				<img src="img/img1.jpeg" alt="">
+				<img src="img/img1.jpeg" alt="">
+				<img src="img/img1.jpeg" alt="">
+			</div>
+			<div class="descr-container">
+				<h2>The greatest bodybuilding video ever!</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<button class="add">Add to card</button>
+			</div>
+		</div>															
 	</section>
 	
-	<div class="swiper-container">
-		<div class="swiper-wrapper">
-			<div class="swiper-slide"></div>
-			<div class="swiper-slide"></div>
-			<div class="swiper-slide"></div>
-		</div>
-		
-		<div class="swiper-button-prev"></div>
-	    
-	    <div class="swiper-button-next"></div>
-	    <div class="swiper-pagination"></div>
-	</div>
-		
 	<footer>
 		
 		<div class="contact">
@@ -74,14 +68,21 @@
 			<li><a href="#">Contact</a></li>
 			<li><a href="store.html">Store</a></li>
 		</ul>
-	</nav>
-		<h3><a href="#">designed by maxim surovtsev</a></h3>
-		<!-- <h1>POWERED BY SUROVTSEV</h1> -->
-	</footer>
+		</nav>
+	
+		<div class="copyright">
+			<span><a href="#" class="policy">Private Policy</a></span>
+			<span>|</span>
+			<span><a href="#">designed by maxim surovtsev</a></span>
+		</div>
 
+	</footer>
+	
+
+	<script src="js/scripts.min.js"></script>
 	<script src="js/jquery.min.js"></script>
 	<script src="js/swiper.min.js"></script>
-	<script src="js/scripts.min.js"></script>
-	
+
+
 </body>
 </html>
