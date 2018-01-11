@@ -7,6 +7,7 @@
 	<title>Home</title>
 	<meta name="description" content="">
 	<link rel="stylesheet" href="css/main.min.css">
+	<link rel="stylesheet" href="css/photoswipe.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 	<style>body { opacity: 1; overflow-x: hidden; } html { background-color: #fff; }</style>
@@ -32,14 +33,50 @@
 <body>
 	<section class="card screen">
 		<div class="card-container">
-			<div class="img-container">
+<!-- 			<div class="img-container">
 				<a href="img/img1.jpeg" rel="alternate" class="img-popup-link"><img src="img/img1.jpeg" alt="	"></a>
 				<a href="img/img2.jpeg" rel="alternate" class="img-popup-link"><img src="img/img2.jpeg" alt=""></a>
 				<a href="img/img3.jpeg" rel="alternate" class="img-popup-link"><img src="img/img3.jpeg" alt=""></a>
 				<a href="img/img1.jpeg" rel="alternate" class="img-popup-link"><img src="img/img1.jpeg" alt="	"></a>
 				<a href="img/img2.jpeg" rel="alternate" class="img-popup-link"><img src="img/img2.jpeg" alt=""></a>
+				</div> -->
+			<div class="img-container" itemscope itemtype="http://schema.org/ImageGallery">
+  				
+  				<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+	    			<a href="img/img1.jpeg" itemprop="contentUrl" data-size="1000x667" data-index="0">
+	     				<img src="img/img1.jpeg" itemprop="thumbnail" alt="Beach">
+	   				</a>
+  				</figure>
+  				
+  				<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      			<a href="img/img2.jpeg" itemprop="contentUrl" data-size="1000x667" data-index="1">
+          			<img src="img/img2.jpeg" itemprop="thumbnail" alt="">
+      			</a>
+  				</figure>  				
+  				<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      			<a href="img/img2.jpeg" itemprop="contentUrl" data-size="1000x667" data-index="1">
+          			<img src="img/img2.jpeg" itemprop="thumbnail" alt="">
+      			</a>
+  				</figure>  				
+  				<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      			<a href="img/img2.jpeg" itemprop="contentUrl" data-size="1000x667" data-index="1">
+          			<img src="img/img2.jpeg"  itemprop="thumbnail" alt="">
+      			</a>
+  				</figure>  				
+  				<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      			<a href="img/img2.jpeg" itemprop="contentUrl" data-size="1000x667" data-index="1">
+          			<img src="img/img2.jpeg"  itemprop="thumbnail" alt="">
+      			</a>
+  				</figure>  				
+  				<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      			<a href="img/img2.jpeg" itemprop="contentUrl" data-size="1000x667" data-index="1">
+          			<img src="img/img2.jpeg"  itemprop="thumbnail" alt="">
+      			</a>
+  				</figure>
 				
 				
+
+
 			</div>
 			<div class="descr-container">
 				<h2>The greatest bodybuilding video ever!</h2>
@@ -53,7 +90,44 @@
 			</div>
 		</div>															
 	</section>
-	
+	<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="pswp__bg"></div>
+    <div class="pswp__scroll-wrap">
+ 
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+ 
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
 	<footer>
 		
 		<div class="contact">
@@ -80,7 +154,8 @@
 
 	</footer>
 	
-
+	<script src="js/photoswipe-ui-default.min.js"></script>
+	<script src="js/photoswipe.min.js"></script>
 	<script src="js/scripts.min.js"></script>
 	<script src="js/jquery.min.js"></script>
 	<script src="js/swiper.min.js"></script>
