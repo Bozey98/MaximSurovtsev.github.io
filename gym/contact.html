@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>Home</title>
+	<meta name="description" content="">
+	<link rel="stylesheet" href="css/main.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+	<style>body { opacity: 1; overflow-x: hidden; } html { background-color: #fff; }</style>
+</head>
+
+<header>
+	<nav>
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="gallery.html">Gallery</a></li>
+			<li><a href="training.html">Training</a></li>
+			<li><a href="contact.html">Contact</a></li>
+			<li><a href="store.html">Store</a></li>
+		</ul>
+	</nav>
+</header>
+
+<button type="button" class="toggle-menu visible-xs" aria-label="Toggle Mobile Menu">
+	<span class="burger-lines"></span>
+</button>
+
+<body>
+	<section class="first screen">
+		<div class="fix"></div>
+		<div class="wrapper">
+			<h1>
+				<a class="scroll" href="#scrolling" data-speed="1000">Contact</a>
+			</h1>
+		</div>
+	
+	<button class="down">
+		<a class="scroll" href="#scrolling" data-speed="1000"></a>
+	</button>
+	
+	</section>
+
+	<section class="contact-container screen">
+		<div class="container">
+			<div class="inf">
+				<h3>Personal information</h3>
+				<p>Full name: <span>Roman Omosov</span></p>
+				<p>Age:  <span>19 years</span></p>
+				<p>Training experience:  <span>5 years</span></p>
+				<p>E-mail:  <a href="#">youremail@e-mail.com</a></p>
+				<p>Phone:  <span>+123-311-121-321</span></p>
+				<p>Skype:  <a href="#">skype_adress</a></p>
+				<p>Youtube chanel:  <a href="#">youtube.com</a></p>
+			</div>
+			<div class="request">
+				<h3>Contact</h3>
+				<p>Feel free to contact me in case of any question</p>
+				<input type="hidden" name="project_name" value="Site Name" >
+				<input type="hidden" name="admin_email" value="admin@mail.com">
+				<input type="hidden" name="form_subject" value="Form Subject">
+				<!-- END Hidden Required Fields -->
+				<form class='callback'>
+					<div class="name"><input type="text" name="Name" placeholder="Name" required pattern="[A-Za-zА-Яа-яЁё]" ></div>
+					<div class="phone">
+						<input type="tel" name="first" placeholder="Phone" pattern="+7[0-9]{10}">
+						<div class="phone">
+						<input type="e-mail" name="first" placeholder="E-mail" pattern="+7[0-9]{10}">
+						<textarea  placeholder="Message" style="resize: none"></textarea>
+					<!-- <input type="text" name="second" placeholder="977" required maxlength="3" pattern="[0-9]{3}">
+					<input type="text" name="Phone" placeholder="3582901" required maxlength="7"  pattern="[0-9]{7}"> -->
+					</div>
+					<button class='add'>Send</button>
+				</form>
+			</div>
+	</div>
+	</section>
+	
+	<footer>
+		
+		<div class="contact">
+			<a href="#"><img src="img/skype.png" alt=""></a>
+			<a href="#"><img src="img/vk.png" alt=""></a>
+			<a href="#"><img src="img/youtube.png" alt=""></a>
+			<a href="#"><img src="img/whatsup.png" alt=""></a>
+		</div>
+		<nav>
+		<ul class='footer-nav'>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="gallery.html">Gallery</a></li>
+			<li><a href="training.html">Training</a></li>
+			<li><a href="contact.html">Contact</a></li>
+			<li><a href="store.html">Store</a></li>
+		</ul>
+		</nav>
+	
+		<div class="copyright">
+			<span><a href="#" class="policy">Private Policy</a></span>
+			<span>|</span>
+			<span><a href="#">designed by maxim surovtsev</a></span>
+		</div>
+
+	</footer>
+	
+
+	<script src="js/scripts.min.js"></script>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/swiper.min.js"></script>
+
+
+</body>
+</html>

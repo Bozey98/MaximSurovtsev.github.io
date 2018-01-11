@@ -5,7 +5,7 @@ $(document).ready(function() {
     $(".scroll").on("click", function(e) { 
 
         e.preventDefault();
-        $("html, body").animate({ scrollTop: $(".second, .swiper-container, .content, .store").offset().top }, 800);
+        $("html, body").animate({ scrollTop: $(".second, .swiper-container, .content, .store, .contact-container, .card").offset().top }, 800);
         return false;
 
     });
