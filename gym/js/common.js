@@ -82,7 +82,9 @@ $(document).ready(function() {
             image[index]     = new Image();
             image[index].src = value['src'];
         });
-
+        var options = {
+		   
+		};
         // Binding click event.
         var $pswp = $('.pswp')[0];
         $pic.on('click', 'figure', function(event) {
@@ -92,7 +94,8 @@ $(document).ready(function() {
             var options = {
                 index: $index,
                 bgOpacity: 0.7,
-                showHideOpacity: true
+                showHideOpacity: false
+
             }
 
             var lightBox = new PhotoSwipe($pswp, PhotoSwipeUI_Default, items, options);
