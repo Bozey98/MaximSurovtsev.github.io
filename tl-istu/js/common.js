@@ -4,13 +4,13 @@ $(function() {
 
 		if ($('.form-container').hasClass('appear')) {
 			$('.form-container').toggleClass('appear');
-			$('body').css('overflow', 'auto');
+			$('body').toggleClass('disable-scroll');
 			setTimeout(function() { 
 				$('.form-container').toggleClass('isDisplay'); 
 				
 			}, 510);
 		} else {
-			$('body').css('overflow', 'hidden');
+			$('body').toggleClass('disable-scroll');
 			$('.form-container').toggleClass('isDisplay');
 			setTimeout(function() { $('.form-container').toggleClass('appear'); }, 10)
 		}
@@ -22,13 +22,13 @@ $(function() {
 
 		if ($('.handheld-nav-ul').hasClass('appear')) {
 			$('.handheld-nav-ul').toggleClass('appear');
-			$('body').css('overflow', 'auto');
+			$('body').toggleClass('disable-scroll');
 			setTimeout(function() { 
 				$('.handheld-nav-ul').toggleClass('isDisplay'); 
 				
 			}, 510);
 		} else {
-			$('body').css('overflow', 'hidden');
+			$('body').toggleClass('disable-scroll');
 			$('.handheld-nav-ul').toggleClass('isDisplay');
 			setTimeout(function() { $('.handheld-nav-ul').toggleClass('appear'); }, 10)
 		}
