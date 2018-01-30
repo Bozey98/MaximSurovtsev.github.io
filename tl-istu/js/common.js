@@ -12,10 +12,10 @@ $(function() {
 				$('body').css('position','relative').css('left','auto').css('right','auto').css('top','auto');
  				$(window).scrollTop(-$('.form-container').data('ycoord'));
 			} 
-			else 
-				{
-					$('body').css('overflow','auto');
-				}
+			// else 
+			// 	{
+			// 		$('body').css('overflow','auto');
+			// 	}
  			}
     		setTimeout(function() { 
 				$('.form-container').toggleClass('isDisplay'); }, 510);
@@ -28,10 +28,10 @@ $(function() {
 				 	$('body').css('position','fixed').css('left','0px').css('right','0px').css('top',ycoord2 + 'px');
 					$('header').css('top', 0);
 				} 
-				else 
-				{
-					$('body').css('overflow','hidden');
-				} 
+				// else 
+				// {
+				// 	$('body').css('overflow','hidden');
+				// } 
 			}
 				$('.form-container').toggleClass('isDisplay');
 				setTimeout(function() { $('.form-container').toggleClass('appear'); }, 10)
