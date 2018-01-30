@@ -71,13 +71,13 @@ $(function() {
 			setTimeout(function() { $('.handheld-nav-ul').toggleClass('appear'); }, 10)
 		}
 	});
-$('body').on('focusin', 'textarea', function(event) {
+$('.form-container').on('focusin', 'textarea', function(event) {
   if(navigator.userAgent.indexOf('Android') > -1){
    
    $('.form-container').toggleClass('scroll');
  }
 });
-$('body').on('focusout', 'textarea', function(event) {
+$('.form-container').on('focusout', 'textarea', function(event) {
   if(navigator.userAgent.indexOf('Android') > -1){
    
    $('.form-container').toggleClass('scroll');
