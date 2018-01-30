@@ -71,13 +71,18 @@ $(function() {
 			setTimeout(function() { $('.handheld-nav-ul').toggleClass('appear'); }, 10)
 		}
 	});
-	$('body').on('focusin', 'textarea', function(event) {
+$('body').on('focusin', 'textarea', function(event) {
   if(navigator.userAgent.indexOf('Android') > -1){
-   var scroll = $(this).offset();
-   window.scrollTo(0, scroll);
+   
+   $('.form-container').toggleClass('scroll');
  }
 });
-
+$('body').on('focusout', 'textarea', function(event) {
+  if(navigator.userAgent.indexOf('Android') > -1){
+   
+   $('.form-container').toggleClass('scroll');
+ }
+});
 	function heightDetect() {
 		$("body").css("height", $(window).height());
 	};
