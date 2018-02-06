@@ -33,6 +33,27 @@
 				</ul>
 			</header>
 			<div class="bg"></div>
+			<div class="overlay">
+				<div class="dialog">
+						<h1 class="offer">Заполните форму, чтобы рассчитать стоимость</h1>
+						<input type="hidden" name="project_name" value="Site Name">
+						<input type="hidden" name="admin_email" value="admin@mail.com">
+						<input type="hidden" name="form_subject" value="Form Subject">
+						<!-- END Hidden Required Fields -->
+						<form class='callback'>
+							<p class="description">Введите ваш email</p>
+							<input type="email" name="Email" placeholder="example@gmail.com" required pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+							<p class="description">Введите Ваш телефон</p>
+							<input type="tel" name="tel" placeholder="8 983 499 31 80" required pattern="(\+?\d[- .]*){11,13}">
+							<button class="button button__main">Отправить заявку</button>
+							<p class="after-button">Наш специалист свяжется с вами в ближайшее время</p>
+							<label class="policy"> Я принимаю условия <a href="#">политики конфиденциальности</a>
+							<input type="checkbox" checked="checked" class='checkbox' required><span class="checkmark"></span>
+							
+						</label>
+					</form>
+				</div>
+			</div>
 			<div class="screen screen__first ">
 				
 				<div class="container">
