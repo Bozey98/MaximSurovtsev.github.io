@@ -8,7 +8,7 @@ var is_chrome = navigator.userAgent.indexOf('Chrome') > -1;
 	var wWidth = $(window).width();
 
 
-	$(".popup").click(function(event){
+	$(".popup").on('click', function(event){
 		var wTop = $(window).scrollTop();
 
 		if ($(event.target).hasClass('person__button')) {
@@ -43,7 +43,7 @@ var is_chrome = navigator.userAgent.indexOf('Chrome') > -1;
 			if (navigator.userAgent.match(/(iPod|iPhone|iPad)/) && navigator.userAgent.match(/AppleWebKit/)) {
 				var ycoord2 = $(window).scrollTop();
 				ycoord2 = ycoord2 * -1;
-				$('.overlay').data('ycoord',ycoord2);
+				$('.dialog').data('ycoord',ycoord2);
 				$('body').css('position','fixed').css('left','0px').css('right','0px').css('top', ycoord2 + 'px');
 			} else {
 				$('body').css('overflow','hidden');
@@ -67,31 +67,33 @@ var is_chrome = navigator.userAgent.indexOf('Chrome') > -1;
 	});
 	
 
-	$(".close").click(function(){
+	$(".close").on('click', function(){
 		$(".overlay").removeClass("visible");
 		if(wWidth < 1024) {
 			if (navigator.userAgent.match(/(iPod|iPhone|iPad)/) && navigator.userAgent.match(/AppleWebKit/)) {
 				$('body').css('position','relative').css('left','auto').css('right','auto').css('top','auto');
+				$(window).scrollTop(-$('.dialog').data('ycoord'));
 			} else {
 					$('body').css('overflow','auto');
 			  }
-		$(window).scrollTop(-$('.overlay').data('ycoord'));
+		
 		}
 	});
 
 
 
-	$(document).click(function(event) {
+	$(document).on('click', function(event) {
 		console.log($(event.target));
 		if (!$(event.target).closest(".dialog, .popup").length && $(".overlay").hasClass('visible')) {
 			$("body").find(".overlay").removeClass("visible");
 			if(wWidth < 1024) {
 				if (navigator.userAgent.match(/(iPod|iPhone|iPad)/) && navigator.userAgent.match(/AppleWebKit/)) {
 					$('body').css('position','relative').css('left','auto').css('right','auto').css('top','auto');
+					$(window).scrollTop(-$('.dialog').data('ycoord'));
 				} else {
 					$('body').css('overflow','auto');
 				  }
-				$(window).scrollTop(-$('.overlay').data('ycoord'));
+				
 			}
 		}
 	});
