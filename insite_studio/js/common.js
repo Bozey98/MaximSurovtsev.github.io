@@ -54,15 +54,15 @@ var is_chrome = navigator.userAgent.indexOf('Chrome') > -1;
 
 	});
 	
-	$('.overlay').on('focusin', '#phone', function(event) {
+	$('.dialog').on('focusin', '#phone', function(event) {
 		if(navigator.userAgent.indexOf('Android') > -1) {
-			$('.overlay').toggleClass('scroll');
+			$('.dialog').toggleClass('scroll');
 		}
 	});
 	
-	$('.overlay').on('focusout', '#phone', function(event) {
+	$('.dialog').on('focusout', '#phone', function(event) {
 		if(navigator.userAgent.indexOf('Android') > -1) {
-			$('.overlay').toggleClass('scroll');
+			$('.dialog').toggleClass('scroll');
 		}
 	});
 	
