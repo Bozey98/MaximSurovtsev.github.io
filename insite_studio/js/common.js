@@ -9,7 +9,8 @@ $(document).ready(function() {
 	var wHeight = $(window).height();
 		
 	function heightDetect() {
-		$(".overlay, .wrapper").css("height", $(window).height());
+		$(".overlay").css("height", $(window).outerHeight());
+		$(".wrapper").css("height", wHeight);
 		// $(".close").css("top", $(window).height()*0.14);
 	};
 
