@@ -54,14 +54,14 @@ $(document).ready(function() {
 		}
 
 		if(wWidth < 1024) {
-			if (navigator.userAgent.match(/(iPod|iPhone|iPad)/) && navigator.userAgent.match(/AppleWebKit/)) {
+			// if (navigator.userAgent.match(/(iPod|iPhone|iPad)/) && navigator.userAgent.match(/AppleWebKit/)) {
 				var ycoord2 = $(window).scrollTop();
 				ycoord2 = ycoord2 * -1;
 				$('.dialog').data('ycoord',ycoord2);
 				$('body').css('position','fixed').css('left','0px').css('right','0px').css('top', ycoord2 + 'px');
-			} else {
-				$('body').css('overflow','hidden');
-			  } 	
+			// } else {
+				// $('body').css('overflow','hidden');
+			  // } 	
  		}
 
 		$(".overlay").addClass("visible");
@@ -94,12 +94,12 @@ $(document).ready(function() {
 	$(".close").on('click', function(){
 		$(".overlay").removeClass("visible");
 		if(wWidth < 1024) {
-			if (navigator.userAgent.match(/(iPod|iPhone|iPad)/) && navigator.userAgent.match(/AppleWebKit/)) {
+			// if (navigator.userAgent.match(/(iPod|iPhone|iPad)/) && navigator.userAgent.match(/AppleWebKit/)) {
 				$('body').css('position','relative').css('left','auto').css('right','auto').css('top','auto');
 				$(window).scrollTop(-$('.dialog').data('ycoord'));
-			} else {
-					$('body').css('overflow','auto');
-			  }
+			// } else {
+			// 		$('body').css('overflow','auto');
+			//   }
 		
 		}
 	});
@@ -111,12 +111,12 @@ $(document).ready(function() {
 		if (!$(event.target).closest(".dialog, .popup").length && $(".overlay").hasClass('visible')) {
 			$("body").find(".overlay").removeClass("visible");
 			if(wWidth < 1024) {
-				if (navigator.userAgent.match(/(iPod|iPhone|iPad)/) && navigator.userAgent.match(/AppleWebKit/)) {
+				// if (navigator.userAgent.match(/(iPod|iPhone|iPad)/) && navigator.userAgent.match(/AppleWebKit/)) {
 					$('body').css('position','relative').css('left','auto').css('right','auto').css('top','auto');
 					$(window).scrollTop(-$('.dialog').data('ycoord'));
-				} else {
-					$('body').css('overflow','auto');
-				  }
+				// } else {
+				// 	$('body').css('overflow','auto');
+				//   }
 				
 			}
 		}
