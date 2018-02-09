@@ -2,11 +2,24 @@ $(document).ready(function() {
 	
 
 
-var is_chrome = navigator.userAgent.indexOf('Chrome') > -1;
+	var is_chrome = navigator.userAgent.indexOf('Chrome') > -1;
 	var is_safari = navigator.userAgent.indexOf("Safari") > -1;
 
 	var wWidth = $(window).width();
+	var wHeight = $(window).height();
+		
+	function heightDetect() {
+		$(".overlay, .wrapper").css("height", $(window).height());
+		// $(".close").css("top", $(window).height()*0.14);
+	};
 
+	heightDetect();
+		
+	if ( wWidth > 480 && (wHeight != 1366 || wWidth !=1024)) {
+		$(window).resize(function() {
+			heightDetect();
+		});
+	}
 
 	$(".popup").on('click', function(event){
 		var wTop = $(window).scrollTop();
@@ -54,18 +67,28 @@ var is_chrome = navigator.userAgent.indexOf('Chrome') > -1;
 
 	});
 	
-	$('.dialog').on('focusin', '#phone', function(event) {
-		if(navigator.userAgent.indexOf('Android') > -1) {
-			$('.dialog').toggleClass('scroll');
+	$('.callback').on('focusin', '#phone', function(event) {
+		if(navigator.userAgent.indexOf('Android') > -1 && !navigator.userAgent.match(/(iPod|iPhone|iPad)/) && !navigator.userAgent.match(/AppleWebKit/)) {
+			$('.wrapper').toggleClass('scroll-phone');
 		}
 	});
 	
-	$('.dialog').on('focusout', '#phone', function(event) {
-		if(navigator.userAgent.indexOf('Android') > -1) {
-			$('.dialog').toggleClass('scroll');
+	$('.callback').on('focusout', '#phone', function(event) {
+		if(navigator.userAgent.indexOf('Android') > -1 && !navigator.userAgent.match(/(iPod|iPhone|iPad)/) && !navigator.userAgent.match(/AppleWebKit/)) {
+			$('.wrapper').toggleClass('scroll-phone');
+		}
+	});
+		$('.callback').on('focusin', '.email', function(event) {
+		if(navigator.userAgent.indexOf('Android') > -1 && !navigator.userAgent.match(/(iPod|iPhone|iPad)/) && !navigator.userAgent.match(/AppleWebKit/)) {
+			$('.wrapper').toggleClass('scroll-name');
 		}
 	});
 	
+	$('.callback').on('focusout', '.email', function(event) {
+		if(navigator.userAgent.indexOf('Android') > -1 && !navigator.userAgent.match(/(iPod|iPhone|iPad)/) && !navigator.userAgent.match(/AppleWebKit/)) {
+			$('.wrapper').toggleClass('scroll-name');
+		}
+	});
 
 	$(".close").on('click', function(){
 		$(".overlay").removeClass("visible");
