@@ -68,24 +68,24 @@ $(document).ready(function() {
 	});
 	
 	$('.callback').on('focusin', '#phone', function(event) {
-		if(navigator.userAgent.indexOf('Android') > -1 && !navigator.userAgent.match(/(iPod|iPhone|iPad)/) && !navigator.userAgent.match(/AppleWebKit/)) {
+		if(navigator.userAgent.indexOf('Android') > -1 && !navigator.userAgent.match(/(iPod|iPhone|iPad)/)) {
 			$('.wrapper').toggleClass('scroll-phone');
 		}
 	});
 	
 	$('.callback').on('focusout', '#phone', function(event) {
-		if(navigator.userAgent.indexOf('Android') > -1 && !navigator.userAgent.match(/(iPod|iPhone|iPad)/) && !navigator.userAgent.match(/AppleWebKit/)) {
+		if(navigator.userAgent.indexOf('Android') > -1 && !navigator.userAgent.match(/(iPod|iPhone|iPad)/)) {
 			$('.wrapper').toggleClass('scroll-phone');
 		}
 	});
 		$('.callback').on('focusin', '.email', function(event) {
-		if(navigator.userAgent.indexOf('Android') > -1 && !navigator.userAgent.match(/(iPod|iPhone|iPad)/) && !navigator.userAgent.match(/AppleWebKit/)) {
+		if(navigator.userAgent.indexOf('Android') > -1 && !navigator.userAgent.match(/(iPod|iPhone|iPad)/)) {
 			$('.wrapper').toggleClass('scroll-name');
 		}
 	});
 	
 	$('.callback').on('focusout', '.email', function(event) {
-		if(navigator.userAgent.indexOf('Android') > -1 && !navigator.userAgent.match(/(iPod|iPhone|iPad)/) && !navigator.userAgent.match(/AppleWebKit/)) {
+		if(navigator.userAgent.indexOf('Android') > -1 && !navigator.userAgent.match(/(iPod|iPhone|iPad)/)) {
 			$('.wrapper').toggleClass('scroll-name');
 		}
 	});
