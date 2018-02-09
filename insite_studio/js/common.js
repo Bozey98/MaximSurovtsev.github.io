@@ -11,6 +11,7 @@ $(document).ready(function() {
 	function heightDetect() {
 		$(".overlay").css("height", $(window).outerHeight());
 		$(".wrapper").css("height", wHeight);
+		
 		// $(".close").css("top", $(window).height()*0.14);
 	};
 
@@ -59,10 +60,16 @@ $(document).ready(function() {
 				ycoord2 = ycoord2 * -1;
 				$('.dialog').data('ycoord',ycoord2);
 				$('body').css('position','fixed').css('left','0px').css('right','0px').css('top', ycoord2 + 'px');
+				if(is_chrome) {
+					$(".overlay").css("bottom", 0).css("top", 0);
+				}
+
+
+				}
 			// } else {
 				// $('body').css('overflow','hidden');
 			  // } 	
- 		}
+ 		
 
 		$(".overlay").addClass("visible");
 
@@ -97,6 +104,7 @@ $(document).ready(function() {
 			// if (navigator.userAgent.match(/(iPod|iPhone|iPad)/) && navigator.userAgent.match(/AppleWebKit/)) {
 				$('body').css('position','relative').css('left','auto').css('right','auto').css('top','auto');
 				$(window).scrollTop(-$('.dialog').data('ycoord'));
+
 			// } else {
 			// 		$('body').css('overflow','auto');
 			//   }
