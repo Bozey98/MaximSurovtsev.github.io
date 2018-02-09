@@ -10,9 +10,9 @@ $(document).ready(function() {
 		
 	function heightDetect() {
 		$(".overlay").css("height", $(window).outerHeight());
-		$(".wrapper").css("height", wHeight);
-		
-		// $(".close").css("top", $(window).height()*0.14);
+		if (wWidth < 1024) {
+			$(".wrapper").css("height", wHeight);
+		}
 	};
 
 	heightDetect();
@@ -48,9 +48,11 @@ $(document).ready(function() {
 
 		if ($(event.target).hasClass('call__button')) {
 			$(".dialog .offer").text("Заказать обратный звонок"); 
-			if(!$('.person-modal').hasClass('block')) {
+			if ( !$('.person-modal').hasClass('block')) {
 				$('.person-modal').addClass('block');
 			}
+			$('.email').addClass('displayNone');
+			$('.email-des').addClass('displayNone');
 			$('.person-modal').text("Заполните форму, и мы свяжемся с Вами в ближайшее время и ответим на все интересующие Вас вопросы"); 
 		}
 
@@ -60,17 +62,16 @@ $(document).ready(function() {
 				ycoord2 = ycoord2 * -1;
 				$('.dialog').data('ycoord',ycoord2);
 				$('body').css('position','fixed').css('left','0px').css('right','0px').css('top', ycoord2 + 'px');
-				if(is_chrome) {
-					$(".overlay").css("bottom", 0).css("top", 0);
+				if(navigator.userAgent.indexOf('Android') > -1 ){
+					$(".overlay").addClass('chromeHeight');
 				}
+			
 
-
-				}
+		}
 			// } else {
 				// $('body').css('overflow','hidden');
 			  // } 	
  		
-
 		$(".overlay").addClass("visible");
 
 	});
@@ -100,15 +101,15 @@ $(document).ready(function() {
 
 	$(".close").on('click', function(){
 		$(".overlay").removeClass("visible");
+		$('.email').removeClass('displayNone');
+		$('.email-des').removeClass('displayNone');
 		if(wWidth < 1024) {
 			// if (navigator.userAgent.match(/(iPod|iPhone|iPad)/) && navigator.userAgent.match(/AppleWebKit/)) {
-				$('body').css('position','relative').css('left','auto').css('right','auto').css('top','auto');
-				$(window).scrollTop(-$('.dialog').data('ycoord'));
-
+			$('body').css('position','relative').css('left','auto').css('right','auto').css('top','auto');
+			$(window).scrollTop(-$('.dialog').data('ycoord'));
 			// } else {
 			// 		$('body').css('overflow','auto');
 			//   }
-		
 		}
 	});
 
@@ -118,14 +119,15 @@ $(document).ready(function() {
 		console.log($(event.target));
 		if (!$(event.target).closest(".dialog, .popup").length && $(".overlay").hasClass('visible')) {
 			$("body").find(".overlay").removeClass("visible");
+			$('.email').removeClass('displayNone');
+			$('.email-des').removeClass('displayNone');
 			if(wWidth < 1024) {
 				// if (navigator.userAgent.match(/(iPod|iPhone|iPad)/) && navigator.userAgent.match(/AppleWebKit/)) {
-					$('body').css('position','relative').css('left','auto').css('right','auto').css('top','auto');
-					$(window).scrollTop(-$('.dialog').data('ycoord'));
+				$('body').css('position','relative').css('left','auto').css('right','auto').css('top','auto');
+				$(window).scrollTop(-$('.dialog').data('ycoord'));
 				// } else {
 				// 	$('body').css('overflow','auto');
 				//   }
-				
 			}
 		}
 	});
