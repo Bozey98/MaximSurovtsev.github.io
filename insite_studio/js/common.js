@@ -31,9 +31,59 @@ $(document).ready(function() {
 
 	$(".case__dialog__button").on('click', function(event){
 		var wTop = $(window).scrollTop();
+		
+		if ($(event.target).hasClass('case__third')) {
+			$(".case__dialog .offer").text("Продажа душевых кабин RADEWAY"); 
+			$('.res-par1').text("radawashop.by"); 
+			$('.res-par2').text("168000 р."); 
+			$('.res-par3').text("3052000 р."); 
+			$('.res-par4').text("Продать душевые кабины через оффлайн магазин (сайт — radawashop.by)"); 
+			$('.res-par5').text("Настройка Я.Д. разработка целевого действия на сайте"); 
+			$('.res-par6').text("13,12 р."); 
+			$('.res-par7').text("7 р."); 
+			$('.res-par8').text("17,7%"); 
+			$('.res-par9').text("11,5%"); 
+			$('.res-par10').text("1,37 мин."); 
+			$('.res11').addClass('displayNone'); 
+			$('.res-par12').text("24 000 р."); 
+			$('.res-par13').text("продано 134 кабины за 3 летних месяца"); 
+		} else if ($(event.target).hasClass('case__first')) {
+			$(".case__dialog .offer").text("Продажа семян и саженцев через корзину сайта"); 
+			$('.res-par1').text("семена и саженцы в розницу"); 
+			$('.res-par2').text("1222986 р."); 
+			$('.res-par3').text("32532200 р. "); 
+			$('.res-par4').text("Организовать продажи в весенний сезон 2017 г."); 
+			$('.res-par5').text("Настройка Яндекс.Директ по ключевым словам"); 
+			$('.res-par6').text("5,56 р."); 
+			$('.res-par7').text("3,45 р."); 
+			$('.res-par8').text("22,69%"); 
+			$('.res-par9').text("12,6%"); 
+			$('.res-par10').text("4,28 мин."); 
+			$('.res11').removeClass('displayNone'); 
+			$('.res-par11').text("3,3%");
+			$('.res-par12').text("600 р."); 
+			$('.res-par13').text("5422 заказа с Яндекс.Директа"); 
+		}  else if ($(event.target).hasClass('case__second')) {
+			$(".case__dialog .offer").text("Продажа бензокос Shtenli MS"); 
+			$('.res-par1').text("benzokosi.by"); 
+			$('.res-par2').text("63120 р."); 
+			$('.res-par3').text("1127520 р. "); 
+			$('.res-par4').text("Организовать продажи в летний сезон 2017 г."); 
+			$('.res-par5').text("Настройка Яндекс.Директ и Яндекс.Метрики"); 
+			$('.res-par6').text("13,12 р."); 
+			$('.res-par7').text("7 р."); 
+			$('.res-par8').text("17,7%"); 
+			$('.res-par9').text("11,5%"); 
+			$('.res-par10').text("1,37 мин."); 
+			$('.res11').removeClass('displayNone'); 
+			$('.res-par11').text("2,5%");
+			$('.res-par12').text("8 500 р."); 
+			$('.res-par13').text("173 заказа с Яндекс.Директа"); 
+		}  
 		$(".overlay__case").addClass("visible");
 		$('.person-modal').addClass('block');
 		$(".dialog .offer").text("Оставьте свои контактные данные"); 
+			
 		$('.person-modal').text("И получите бесплатную консультацию о том, как повысить конверсию на Вашем сайте"); 
 		if(wWidth < 1024) {
 			// if (navigator.userAgent.match(/(iPod|iPhone|iPad)/) && navigator.userAgent.match(/AppleWebKit/)) {
@@ -142,12 +192,7 @@ $(document).ready(function() {
 		}
 	});
 
-// $(window).on('focusin', 'input, textarea', function(event) {
-// 	if(navigator.userAgent.indexOf('Android') > -1 && !navigator.userAgent.match(/(iPod|iPhone|iPad)/)) {
-// 		var scroll = $(this).offset() - 50;
-// 		$(window).scrollTop(scroll);
-// 	}
-// });
+
 
 	$(document).on('click', function(event) {
 		console.log($(event.target));
@@ -247,6 +292,22 @@ $(document).ready(function() {
 			});
 		});
 
+	$('.button__case').on('click', function() {
+
+		var offsetFourthScreen = wWidth*0.025, 
+			speedScroll = 650;
+	   
+		if (wWidth < 480)
+	   	{
+	   		offsetFourthScreen =  wWidth*0.075;
+	   		speedScroll = 1000;
+	   	}
+		
+		var scrollPoint = $('.screen__fourth').offset().top + offsetFourthScreen;
+		$('body,html').animate({ scrollTop: scrollPoint }, speedScroll);
+
+		return false;
+	});
 
 });
 
