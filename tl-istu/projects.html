@@ -20,9 +20,9 @@
 		<link rel="stylesheet" href="css/main.min.css">
 	</head>
 	<body>
-		<header>
+		<header class='site-header'>
 			<nav class="header-nav">
-				<div class="logo-wrapper"><img src="img/logo.png" alt="" class="logo"></div>
+				<div class="logo-wrapper"><img src="img/big-logo.png" alt="" class="logo"></div>
 				<ul class="header-nav-ul">
 					<li class="header-nav-ul-li"><a href="index.html" class="header-nav-ul-li-a"><img src="img/icon1.png" alt=""></a></li>
 					<li class="header-nav-ul-li"><a href="projects.html" class="header-nav-ul-li-a"><img src="img/icon2.png" alt=""></a></li>
@@ -39,114 +39,104 @@
 					<li class="handheld-nav-ul-li"><a href="articles.html" class="handheld-nav-ul-li-a"><img src="img/icon4.png" alt="">Публикации</a></li>
 					<li class="handheld-nav-ul-li"><a href="research_activities.html" class="handheld-nav-ul-li-a"><img src="img/icon5.png" alt="">НИД</a></li>
 					<li class="handheld-nav-ul-li"><a href="social.html" class="handheld-nav-ul-li-a"><img src="img/icon6.png" alt="">Общественная жизнь</a></li>
-				</ulcard.html
+				</ul>
 				<div class="toggle-menu">
 					<span></span>
 					<span></span>
 					<span></span>
 				</div>
-				<button class="handheld-form"><img src="img/message.png" alt=""></button>
+				
 				<button class="form">Задать вопрос</button>
-				<div class="form-container">
-					<input type="hidden" name="project_name" value="Site Name">
-					<input type="hidden" name="admin_email" value="admin@mail.com">
-					<input type="hidden" name="form_subject" value="Form Subject">
-					<!-- END Hidden Required Fields -->
-					<form class='callback'>
-						<input type="text" name="Name" placeholder="Ваше имя" required>
-						<input type="e-mail" name="E-mail" placeholder="Ваш e-mail" required>
-						<textarea  placeholder="Вопрос" style="resize: none"></textarea>
-						<button class="send">Отправить</button>
-					</form>
-					</div>
-				</div>
+				<button class="handheld-form"><img src="img/message-black.png" alt=""></button>
+				
 			</nav>
 		</header>
-		<section class="front-screen" style="background-image: url(img/front.jpg);">
-			<div class="wrapper">
-				<h1 class="main-header">Транспортная <br>лаборатория ИрНИТУ</br></h1>
-				<h3 class="short-inf">Деятельность — очень кратко <br>полезная информация</br>заключение</h3>
-			</div>
-		</section>
-		<section class="about screen">
+		<div class="overlay"></div>
+		<div class="form-container">
 			
-			<div class="wrapper">
-				<div class="container">
-					<div class="head">
-						<div class="head-top">
-							<div class="language">
+			<form class='callback'>
+				<h3 class='handheld-h3'>Свяжитесь с нами!</h3>
+				<input type="hidden" name="project_name" value="Site Name">
+				<input type="hidden" name="admin_email" value="admin@mail.com">
+				<input type="hidden" name="form_subject" value="Form Subject">
+				<input type="text" name="Name" placeholder="Ваше имя" required>
+				<input type="e-mail" name="E-mail" placeholder="Ваш e-mail" required>
+				<textarea  placeholder="Вопрос" style="resize: none"></textarea>
+				<button class="send">Отправить</button>
+				<svg class="close" viewbox="-3 -3 113 113" preserveAspectRatio="xMinYMax meet">
+					<line fill="none" x1="0" y1="0" x2="100" y2="100" stroke="#00ADB5" stroke-width="16"   />
+						<line fill="none" x1="0" y1="100" x2="100" y2="0" stroke="#00ADB5" stroke-width="16"   />
+						</svg>
+					</form>
+				</div>
+			</div>
+
+			<main class="content">
+				
+				<div class="content-container">
+					<header class="content-header">
+						<ul class="content-header-navigation">
+							<li class="content-header-navigation-li">
 								<a href="#">EN</a>
-								<a href="#" class='active'>RU</a>
-							</div>
-							<div class="search">
+								<a href="#">RU</a>
+							</li>
+							<li class="content-header-navigation-li">
 								<input type="text" name="search" placeholder='транспортное исследование'>
+							</li>
+							<li class="content-header-navigation-li">
+								<h2 class="content-head">Проекты</h2>
+							</li>
+							<li class="content-header-navigation-li">
+								<a href="index.html">Главная</a><span> / </span><a class='current-page' href="projects.html">Проекты</a>
+							</li>
+						</ul>
+						<p class="content-image-tag">Проекты</p>
+					</header>
+					<div class="content-posts">
+						<a href="card.html" class="content-post" style="background-image: url(img/img1.jpeg)">
+							<div class="content-post-preview" >
+								<p class="content-post-preview-description">Проект нашей лаборатории</p>
 							</div>
-						</div>
-						<div class="bread">
-							<h2>Проекты</h2>
-							<div class="crumbs">
-								<a href="index.html">Главная</a><span> &nbsp;/ Проекты</span>
+						</a>
+						<a href="card.html" class="content-post" style="background-image: url(img/img2.jpg)">
+							<div class="content-post-preview">
+								<p class="content-post-preview-description">Проект, обладающий большой общественной значимостью</p>
 							</div>
-						</div>
-						<!-- <p class="img-tag">лаборатория</p> -->
-					</div>
-					<div class="content">
-						<div class="articles">
-							<a href="card.html" class="article" style="background-image: url(img/img1.jpeg)">
-								<div class="article-preview" >
-									<p>Проект нашей лаборатории</p>
-								</div>
-							</a>
-							<a href="card.html" class="article" style="background-image: url(img/img2.jpg)">
-								<div class="article-preview">
-									<p>Проект, обладающий большой общественной значимостью</p>
-								</div>
-							</a>
-							<a href="card.html" class="article" style="background-image: url(img/img3.jpeg)">
-								<div class="article-preview" >
-									<p>Очень важная и необходимая разработка в сфере транспортных путей</p>
-								</div>
-							</a>
-							<a href="card.html" class="article" style="background-image: url(img/img4.jpg)">
-								<div class="article-preview" >
-									<p>Проект, обладающий широким рядом наград</p>
-								</div>
-							</a>
-							<a href="card.html" class="article" style="background-image: url(img/img5.jpeg)">
-								<div class="article-preview">
-									<p>Еще какой-то проект</p>
-								</div>
-							</a>
-							<a href="card.html" class="article" style="background-image: url(img/img6.jpeg)">
-								<div class="article-preview">
-									<p>Разработка очень полезной вещи, решающей все насущные проблемы бытия</p>
-								</div>
-							</a>
-							<a href="card.html" class="article" style="background-image: url(img/img7.jpeg)">
-								<div class="article-preview" >
-									<p>Проект, помогающий регулировать общественное движение на пешеходных переходах</p>
-								</div>
-							</a>
-							<a href="card.html" class="article" style="background-image: url(img/img1.jpeg)">
-								<div class="article-preview" >
-									<p>Самый успешный и общественно-признанный проект в сфере транспорта</p>
-								</div>
-							</a>
-						</div>
-						
-						
-					
-					</div></div>
-					<div class="sidebar">
-						<div class="recent">
-							
-						</div>
-						<div class="popular">
-							
-						</div>
+						</a>
+						<a href="card.html" class="content-post" style="background-image: url(img/img3.jpeg)">
+							<div class="content-post-preview" >
+								<p class="content-post-preview-description">Очень важная и необходимая разработка в сфере транспортных путей</p>
+							</div>
+						</a>
+						<a href="card.html" class="content-post" style="background-image: url(img/img4.jpg)">
+							<div class="content-post-preview" >
+								<p class="content-post-preview-description">Проект, обладающий широким рядом наград</p>
+							</div>
+						</a>
+						<a href="card.html" class="content-post" style="background-image: url(img/img5.jpeg)">
+							<div class="content-post-preview">
+								<p class="content-post-preview-description">Еще какой-то проект</p>
+							</div>
+						</a>
+						<a href="card.html" class="content-post" style="background-image: url(img/img6.jpeg)">
+							<div class="content-post-preview">
+								<p class="content-post-preview-description">Разработка очень полезной вещи, решающей все насущные проблемы бытия</p>
+							</div>
+						</a>
+						<a href="card.html" class="content-post" style="background-image: url(img/img7.jpeg)">
+							<div class="content-post-preview" >
+								<p class="content-post-preview-description">Проект, помогающий регулировать общественное движение на пешеходных переходах</p>
+							</div>
+						</a>
+						<a href="card.html" class="content-post" style="background-image: url(img/img1.jpeg)">
+							<div class="content-post-preview" >
+								<p class="content-post-preview-description">Самый успешный и общественно-признанный проект в сфере транспорта</p>
+							</div>
+						</a>
 					</div>
 					
-				</section>
+					
+				</div></main>
 				
 				<footer>
 					<div class="container">
