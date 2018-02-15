@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>Title</title>
+		<meta name="description" content="">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<meta property="og:image" content="path/to/image.jpg">
+		<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+		<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+		<!-- Chrome, Firefox OS and Opera -->
+		<meta name="theme-color" content="#000">
+		<!-- Windows Phone -->
+		<meta name="msapplication-navbutton-color" content="#000">
+		<!-- iOS Safari -->
+		<meta name="apple-mobile-web-app-status-bar-style" content="#000">
+		<link rel="stylesheet" href="css/main.min.css">
+		<link rel="stylesheet" href="css/jquery.fullpage.min.css">
+	</head>
+	<body>
+		<header class='site-header'>
+			<nav class="header-nav">
+				<div class="logo-wrapper"><img src="img/big-logo.png" alt="" class="logo"></div>
+				<ul class="header-nav-ul">
+					<li class="header-nav-ul-li"><a href="index.html" class="header-nav-ul-li-a"><img src="img/icon1.png" alt=""></a></li>
+					<li class="header-nav-ul-li"><a href="projects.html" class="header-nav-ul-li-a"><img src="img/icon2.png" alt=""></a></li>
+					<li class="header-nav-ul-li"><a href="technology.html" class="header-nav-ul-li-a"><img src="img/icon3.png" alt=""></a></li>
+					<li class="header-nav-ul-li"><a href="articles.html" class="header-nav-ul-li-a"><img src="img/icon4.png" alt=""></a></li>
+					<li class="header-nav-ul-li"><a href="research_activities.html" class="header-nav-ul-li-a"><img src="img/icon5.png" alt=""></a></li>
+					<li class="header-nav-ul-li"><a href="social.html" class="header-nav-ul-li-a"><img src="img/icon6.png" alt=""></a></li>
+				</ul>
+				<ul class="handheld-nav-ul">
+					<li class="handheld-nav-ul-li">TL-ISTU.EDU</li>
+					<li class="handheld-nav-ul-li"><a href="index.html" class="handheld-nav-ul-li-a"><img src="img/icon1.png" alt="">О лаборатории</a></li>
+					<li class="handheld-nav-ul-li"><a href="projects.html" class="handheld-nav-ul-li-a"><img src="img/icon2.png" alt="">Проекты</a></li>
+					<li class="handheld-nav-ul-li"><a href="technology.html" class="handheld-nav-ul-li-a"><img src="img/icon3.png" alt="">Технологии</a></li>
+					<li class="handheld-nav-ul-li"><a href="articles.html" class="handheld-nav-ul-li-a"><img src="img/icon4.png" alt="">Публикации</a></li>
+					<li class="handheld-nav-ul-li"><a href="research_activities.html" class="handheld-nav-ul-li-a"><img src="img/icon5.png" alt="">НИД</a></li>
+					<li class="handheld-nav-ul-li"><a href="social.html" class="handheld-nav-ul-li-a"><img src="img/icon6.png" alt="">Общественная жизнь</a></li>
+				</ul>
+				<div class="toggle-menu">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+				
+				<button class="form">Задать вопрос</button>
+				<button class="handheld-form"><img src="img/message-black.png" alt=""></button>
+				
+			</nav>
+		</header>
+		<div class="overlay"></div>
+		<div class="form-container">
+			
+			<form class='callback'>
+				<h3 class='handheld-h3'>Свяжитесь с нами!</h3>
+				<input type="hidden" name="project_name" value="Site Name">
+				<input type="hidden" name="admin_email" value="admin@mail.com">
+				<input type="hidden" name="form_subject" value="Form Subject">
+				<input type="text" name="Name" placeholder="Ваше имя" required>
+				<input type="e-mail" name="E-mail" placeholder="Ваш e-mail" required>
+				<textarea  placeholder="Вопрос" style="resize: none"></textarea>
+				<button class="send">Отправить</button>
+				<svg class="close" viewbox="-3 -3 113 113" preserveAspectRatio="xMinYMax meet">
+					<line fill="none" x1="0" y1="0" x2="100" y2="100" stroke="#393E46" stroke-width="14"   />
+						<line fill="none" x1="0" y1="100" x2="100" y2="0" stroke="#393E46" stroke-width="14"   />
+						</svg>
+					</form>
+				</div>
+			</div>
+
+			<div id="fullpage">
+				<section class="section fp-auto-height-responsive" id='front-screen' style="background-image: url(img/front.jpg);">
+					<div class="wrapper">
+						<h1 class="main-header">Транспортная <br>лаборатория ИрНИТУ</br></h1>
+						<h3 class="short-inf">Деятельность — очень кратко <br>полезная информация</br>заключение</h3>
+						<div class="mouse-icon"><div class="wheel"></div></div>
+					</div>
+				</section>
+				<section class="section">
+					<main class="content main">
+						
+						<div class="content-container">
+							<header class="content-header">
+								<ul class="content-header-navigation">
+									<li class="content-header-navigation-li">
+										<a href="#">EN</a>
+										<a href="#">RU</a>
+									</li>
+									<li class="content-header-navigation-li">
+										<input type="text" name="search" placeholder='транспортное исследование'>
+									</li>
+									<li class="content-header-navigation-li">
+										<h2 class="content-head">О лаборатории</h2>
+									</li>
+									<li class="content-header-navigation-li">
+										<a href="index.html" class='current-page'>Главная</a>
+									</li>
+								</ul>
+								<p class="content-image-tag">лаборатория</p>
+							</header>
+							
+							<div class="content-image" style="background-image: url(img/img3.jpeg);"><p class="content-image-description">Очень красивая и яркая картинка!</p></div>
+							<p class='content-paragraph'>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. До семантика, повстречался ipsum переулка речью переписывается, великий города? Языком запятых ведущими сбить! Живет страну вдали одна запятых рыбного имени осталось реторический щеке залетают переписали, семь ipsum, пунктуация раз подпоясал себя, гор обеспечивает дороге напоивший пояс даль то, текста наш переулка снова! Снова точках рекламных повстречался рыбного его, безорфографичный, по всей продолжил агенство но родного осталось она переулка страна за толку своих?</p>
+							
+							
+							<p class='content-paragraph'>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Наш переписали ручеек великий, они, заманивший моей текстами осталось снова но взгляд даль всемогущая своего знаках коварный однажды большой собрал грамматики своих вершину силуэт толку. Там даль, всемогущая повстречался, пунктуация ее букв точках однажды буквоград коварных текстами жаренные подзаголовок прямо!</p>
+							<div class="content-image" style="background-image: url(img/img3.jpeg);"><p class="content-image-description">Очень красивая и яркая картинка!</p></div>
+							<p class='content-paragraph'>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. До семантика, повстречался ipsum переулка речью переписывается, великий города? Языком запятых ведущими сбить! Живет страну вдали одна запятых рыбного имени осталось реторический щеке залетают переписали, семь ipsum, пунктуация раз подпоясал себя, гор обеспечивает дороге напоивший пояс даль то, текста наш переулка снова! Снова точках рекламных повстречался рыбного его, безорфографичный, по всей продолжил агенство но родного осталось она переулка страна за толку своих? </p>
+							<div class="content-image" style="background-image: url(img/img5.jpeg);"><p class="content-image-description">Очень красивая и яркая картинка!</p></div>
+							<p class='content-paragraph'>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Буквоград вдали пор то взобравшись своих коварных пунктуация меня возвращайся.</p>
+							
+							<p class='content-paragraph'>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Наш переписали ручеек великий, они, заманивший моей текстами осталось снова но взгляд даль всемогущая своего знаках коварный однажды большой собрал грамматики своих вершину силуэт толку. Там даль, всемогущая повстречался, пунктуация ее букв точках однажды буквоград коварных текстами жаренные подзаголовок прямо!</p>
+							<p class='content-paragraph'>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. До семантика, повстречался ipsum переулка речью переписывается, великий города? Океана коварных своих рыбными ты власти дорогу всемогущая парадигматическая подпоясал даже прямо она продолжил рыбного составитель текстов лучше домах, собрал первую над то силуэт которое злых предложения до! Даль рукопись, ты рукописи обеспечивает все, буквоград реторический силуэт свой текст, себя запятых ведущими! Назад ipsum подзаголовок даже.</p>
+							
+							<div class="content-image" style="background-image: url(img/img2.jpg);"><p class="content-image-description">Очень красивая и яркая картинка!</p></div>
+							<p class='content-paragraph'>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Образ путь речью знаках диких семантика последний по всей предупредила. Необходимыми заглавных свою пунктуация гор маленький вершину большой страна курсивных текстов.</p>
+							<div class="content-image" style="background-image: url(img/img5.jpeg);"><p class="content-image-description">Очень красивая и яркая картинка!</p></div>
+							<p class='content-paragraph'>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Сбить пустился подпоясал продолжил родного. Они семь вопроса использовало пор журчит но снова, переписали реторический рекламных рыбными вопрос предложения ручеек пояс последний, от всех которое однажды пустился курсивных ему его. Безорфографичный решила большого большой великий парадигматическая там силуэт своего осталось свою.</p>
+							<div class="content-image" style="background-image: url(img/img7.jpeg);"><p class="content-image-description">Очень красивая и яркая картинка!</p></div>
+							<p class='content-paragraph'>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Сбить пустился подпоясал продолжил родного. Они семь вопроса использовало пор журчит но снова, переписали реторический рекламных рыбными вопрос предложения ручеек пояс последний, от всех которое однажды пустился курсивных ему его. Безорфографичный решила большого большой великий парадигматическая там силуэт своего осталось свою.</p>
+							<p class='content-paragraph'>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Свой, щеке необходимыми вопрос! Бросил!</p>
+							<div class="content-image" style="background-image: url(img/img2.jpg);"><p class="content-image-description">Очень красивая и яркая картинка!</p></div>
+							
+							<p class='content-paragraph'>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Наш переписали ручеек великий, они, заманивший моей текстами осталось снова но взгляд даль всемогущая своего знаках коварный однажды большой собрал грамматики своих вершину силуэт толку. Там даль, всемогущая повстречался, пунктуация ее букв точках однажды буквоград коварных текстами жаренные подзаголовок прямо!</p>
+					
+							<div class="share-container">
+								<p>Рассказать друзьям:</p>
+								<div class='share-wrapper'><a href="#" class="share"><img src="img/share_vk.png" alt=""></a>
+								<a href="#" class="share"><img src="img/share_fb.png" alt=""></a>
+								<a href="#" class="share"><img src="img/share-gg.png" alt=""></a>
+								</div>
+							</div>
+						</div>
+						
+					</main>
+				</section>
+			</div>
+			<footer>
+				<div class="container">
+					<div class="logo-container"><img src="img/logo.png" alt=""><h3>TL-ISTU.EDU</h3></div>
+					<p class="rights">Все права защищены<br>2008&nbsp;-&nbsp;2018</br></p>
+				</div>
+				<div class="container">
+					<h3>Карта сайта:</h3>
+					<ul class="footer-nav">
+						<li><a href="#">О лаборатории</a></li>
+						<li><a href="#">Проекты</a></li>
+						<li><a href="#">Технологии</a></li>
+					</ul>
+					<h3>Публикации:</h3>
+					<ul class="footer-nav">
+						<li><a href="#">— статьи</a></li>
+						<li><a href="#">— книги</a></li>
+						
+					</ul>
+					<h3>Научно-исследовательская деятельность</h3>
+					<ul class="footer-nav">
+						<li><a href="#">— лаборатории</a></li>
+						<li><a href="#">— студентов</a></li>
+					</ul>
+				</div>
+				<div class="container">
+					<div class="contact">
+						<h3>Почта:</h3>
+						<p>TL-istu@tl-istu.com</p>
+					</div>
+					<div class="address">
+						<h3>Адрес:</h3>
+						<p>г. Иркутск, ул. Пушкина, д. 182</p>
+					</div>
+				</div>
+				<div class="container">
+					<div class="contact">
+						<h3>Телефон:</h3>
+						<p>+7 983 587 12 89</p>
+					</div>
+					<h3>Наши соцсети:</h3>
+					<div class="social">
+						<a href="#"><img src="img/vk.png" alt=""></a>
+						<a href="#"><img src="img/fb.png" alt=""></a>
+						<a href="#"><img src="img/g+.png" alt=""></a>
+					</div>
+					<a href="#" class="insite"><img src="img/insite.png" alt="">Разработка сайта</a>
+				</div>
+			</footer>
+			<script src="js/scripts.min.js"></script>
+			<script src="js/jquery.fullpage.min.js"></script>
+			<script>
+				//Инициализация fullpage.js для анимации скролла на главной странице при ширине экрана, превышающей 1024 пикселя
+				window.onload = function() {
+					if ($(window).width() > 1024) {
+						var st = 0,
+							fixThreshold = 1,
+							numberOfItems = $('#fullpage .section').length;
+						
+						function reenableScroll(){
+							$.fn.fullpage.setAutoScrolling(false);
+							st = $(window).scrollTop();
+							$(window).on('scroll.fix', scrollHandler);
+						}
+
+						function scrollHandler(){
+							if($(window).scrollTop() < st - fixThreshold){
+								$.fn.fullpage.setAutoScrolling(true);
+								$(window).off('scroll.fix');
+							}
+						}
+
+						$('#fullpage').fullpage({
+							css3: true,
+							fitToSection: false,
+							scrollBar: true,
+							afterLoad: function(anchorLink, index) {
+								if(index === numberOfItems)reenableScroll();
+							}
+						});
+					}	
+				}
+			</script>
+		</body>
+	</html>
