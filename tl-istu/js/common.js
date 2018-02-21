@@ -5,23 +5,29 @@ $(function() {
 		is_safari = navigator.userAgent.indexOf("Safari") > -1,
 		wWidth = $(window).width(),
 		wHeight = $(window).height(),
-		dHeight = $(document).outerHeight();
+		dHeight = $(document).outerHeight(),
+		new_wHeight;
 
 	//Функция инициализации высоты главного экрана и оверлея и отмена перерисовки окна при ширине окна, не превышающей 480 пикселей
 	function heightDetect() {
-		$("#front_screen").height(wHeight);
-		if (wWidth < 480) {
+		$("#front_screen").height($(window).height());
+		new_wHeight = $(window).outerHeight();
+		if (wWidth < 1024) {
 			$(".overlay").height($(document).outerHeight());
 		}
 	};
 
 	heightDetect();
 		
-	if ( wWidth > 480 && (wHeight != 1366 || wWidth !=1024)) {
+	// if ( wWidth > 480 && (wHeight != 1366 || wWidth !=1024)) {
 		$(window).resize(function() {
-			heightDetect();
+			wWidth = $(window).width();
+			if ( Math.abs(new_wHeight - $(window).outerHeight()) > 100 && wWidth < 1024) {
+				heightDetect();
+			} else if (wWidth >= 1024) {
+				heightDetect();
+			}
 		});
-	}
 
 		
 			
@@ -57,9 +63,27 @@ $(function() {
 	//Открытие мобильного модального окна формы обратной связи при нажатии на кнопку в шапке
 	$('.site-header-nav-handheld_form').on('click', function() {
 		var scrollPosition = $(window).scrollTop() * -1,
-				topCoord = $(document).scrollTop();
+				topCoord = $(document).scrollTop(),
+				wOuterHeight = $(window).outerHeight();
+	
+		// topCoord += new_wHeight*0.15;
+		// $(".form_container").css('height', 'auto');
+		if (wWidth > 480 && wWidth > new_wHeight) {
+			topCoord += new_wHeight*0.2;
+			$(".form_container").css('height', 'auto');
+		} else if (wWidth > 480 && wWidth < new_wHeight) {
+			topCoord += new_wHeight*0.2;
+			$(".form_container").css('height', 'auto');
+		}
+		else if (wWidth > 480 && new_wHeight < 480) {
+			topCoord += new_wHeight*0.05;
+			$(".form_container").css('height', 'auto');
+		} else {
+			$(".form_container").height(wOuterHeight);
+		}
+
 		$(".overlay").height($(document).outerHeight());
-		$(".form_container").height($(window).outerHeight());
+		
 		$('.form_container').css('top', topCoord);
 		$('.form_container').addClass('isDisplay');
 

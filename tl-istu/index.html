@@ -505,6 +505,11 @@
 					</a>
 				</div>
 				<a href="#" class="footer-container-our_logo"><img src="img/insite.png" alt="insite-web.com">Разработка сайта</a>
+				<div class="footer-switch-lang">
+									<a href="#" class='currentLang'>RU</a>
+									<span> / </span>
+									<a href="#">EN</a>
+								</div>
 			</div>
 		</footer>
 		<script src="js/scripts.min.js"></script>
@@ -512,32 +517,37 @@
 		<script>
 			//Инициализация fullpage.js для анимации скролла на главной странице при ширине экрана, превышающей 1024 пикселя
 			window.onload = function() {
-				if ($(window).width() > 1024) {
-					var st = 0,
-						fixThreshold = 1,
-						numberOfItems = $('#fullpage .section').length;
-					
-					function reenableScroll(){
-						$.fn.fullpage.setAutoScrolling(false);
-						st = $(window).scrollTop();
-						$(window).on('scroll.fix', scrollHandler);
-					}
-					function scrollHandler(){
-						if($(window).scrollTop() < st - fixThreshold){
-							$.fn.fullpage.setAutoScrolling(true);
-							$(window).off('scroll.fix');
+			function is_touch_device() {
+				 return (('ontouchstart' in window)
+				      || (navigator.MaxTouchPoints > 0)
+				      || (navigator.msMaxTouchPoints > 0));
+				}
+				if(!is_touch_device()) {
+						var st = 0,
+							fixThreshold = 1,
+							numberOfItems = $('#fullpage .section').length;
+						
+						function reenableScroll(){
+							$.fn.fullpage.setAutoScrolling(false);
+							st = $(window).scrollTop();
+							$(window).on('scroll.fix', scrollHandler);
 						}
-					}
-					$('#fullpage').fullpage({
-						css3: true,
-						fitToSection: false,
-						scrollBar: true,
-						afterLoad: function(anchorLink, index) {
-							if(index === numberOfItems)reenableScroll();
+						function scrollHandler(){
+							if($(window).scrollTop() < st - fixThreshold){
+								$.fn.fullpage.setAutoScrolling(true);
+								$(window).off('scroll.fix');
+							}
 						}
-					});
-					//$('.site-header-nav-ul-li').attr('data'));
-					}
+						$('#fullpage').fullpage({
+							css3: true,
+							fitToSection: false,
+							scrollBar: true,
+							afterLoad: function(anchorLink, index) {
+								if(index === numberOfItems)reenableScroll();
+							}
+						});
+						//$('.site-header-nav-ul-li').attr('data'));
+						}
 					
 					
 			}
