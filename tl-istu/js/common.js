@@ -30,7 +30,9 @@ $(function() {
 		});
 
 		
-			
+	// $('.content-post-description').hover(function(event) {
+	// 	$(event.target).prevUntil('.content-post-horizontal, .content-post-vertical').toggleClass('hoverPost');
+	// });	
 	//Функция закрытия модального окна
 	function close() {
 		$('.form_container').removeClass('appear');
@@ -69,10 +71,10 @@ $(function() {
 		// topCoord += new_wHeight*0.15;
 		// $(".form_container").css('height', 'auto');
 		if (wWidth > 480 && wWidth > new_wHeight) {
-			topCoord += new_wHeight*0.2;
+			topCoord += (new_wHeight - 657) / 2;
 			$(".form_container").css('height', 'auto');
 		} else if (wWidth > 480 && wWidth < new_wHeight) {
-			topCoord += new_wHeight*0.2;
+			topCoord += (new_wHeight - 657) / 2;
 			$(".form_container").css('height', 'auto');
 		}
 		else if (wWidth > 480 && new_wHeight < 480) {

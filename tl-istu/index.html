@@ -194,7 +194,7 @@
 					</li>
 				</ul>
 				<ul class="site-header-nav-ul_handheld">
-					<li class="site-header-nav-ul_handheld-li">TL-ISTU.EDU</li>
+					<li class="site-header-nav-ul_handheld-li"><span>TL-ISTU.EDU</span></li>
 					<li class="site-header-nav-ul_handheld-li">
 						<a href="index.html" class="site-header-nav-ul_handheld-li-a">
 							<svg version="1.1" class='menu_icon' xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="10 10 140 140" style="enable-background:new 0 0 150 150;" xml:space="preserve">
@@ -506,10 +506,10 @@
 				</div>
 				<a href="#" class="footer-container-our_logo"><img src="img/insite.png" alt="insite-web.com">Разработка сайта</a>
 				<div class="footer-switch-lang">
-									<a href="#" class='currentLang'>RU</a>
-									<span> / </span>
-									<a href="#">EN</a>
-								</div>
+					<a href="#" class='currentLang'>RU</a>
+					<span> / </span>
+					<a href="#">EN</a>
+				</div>
 			</div>
 		</footer>
 		<script src="js/scripts.min.js"></script>
@@ -522,7 +522,7 @@
 				      || (navigator.MaxTouchPoints > 0)
 				      || (navigator.msMaxTouchPoints > 0));
 				}
-				if(!is_touch_device()) {
+				if(!is_touch_device() && $(window).width() > 1200) {
 						var st = 0,
 							fixThreshold = 1,
 							numberOfItems = $('#fullpage .section').length;
