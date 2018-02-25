@@ -70,18 +70,13 @@ $(function() {
 	
 		// topCoord += new_wHeight*0.15;
 		// $(".form_container").css('height', 'auto');
-		if (wWidth > 480 && wWidth > new_wHeight) {
-			topCoord += (new_wHeight - 657) / 2;
-			$(".form_container").css('height', 'auto');
-		} else if (wWidth > 480 && wWidth < new_wHeight) {
-			topCoord += (new_wHeight - 657) / 2;
-			$(".form_container").css('height', 'auto');
-		}
-		else if (wWidth > 480 && new_wHeight < 480) {
-			topCoord += new_wHeight*0.05;
-			$(".form_container").css('height', 'auto');
+		
+
+		 if (wWidth < 480 && $(window).width() < $(window).height()) {
+			$(".form_container").css('height', wOuterHeight + 'px');
 		} else {
-			$(".form_container").height(wOuterHeight);
+			topCoord += $(window).height()*0.15;
+			$(".form_container").css('height', 'auto');
 		}
 
 		$(".overlay").height($(document).outerHeight());
